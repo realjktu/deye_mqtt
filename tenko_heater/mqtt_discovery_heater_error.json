@@ -1,0 +1,18 @@
+{
+  "device": {
+    "identifiers": [
+      "heater"
+    ],
+    "manufacturer": "Tenko",
+    "model": "TH-18",
+    "name": "Tenko Heater",
+    "serial_number": "12345678"
+  },
+  "name": "Heater connectivity",
+  "device_class": "connectivity",
+  "enabled_by_default": true,
+  "object_id": "heater_connectivity",
+  "state_topic": "homeassistant/sensor/heater/state",
+  "unique_id": "heater_connectivity",
+  "value_template": "{{ value_json.error }}"
+}

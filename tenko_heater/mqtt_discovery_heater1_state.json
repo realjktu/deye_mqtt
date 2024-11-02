@@ -1,0 +1,18 @@
+{
+  "device": {
+    "identifiers": [
+      "heater"
+    ],
+    "manufacturer": "Tenko",
+    "model": "TH-18",
+    "name": "Tenko Heater",
+    "serial_number": "210908_020"
+  },
+  "name": "Heater 1 state",
+  "device_class": "enum",
+  "enabled_by_default": true,
+  "object_id": "heater_heater1_state",
+  "state_topic": "homeassistant/sensor/heater/state",
+  "unique_id": "heater_heater1_state",
+  "value_template": "{{ value_json.heater1_state }}"
+}

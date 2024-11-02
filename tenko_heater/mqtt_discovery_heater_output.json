@@ -1,0 +1,20 @@
+{
+  "device": {
+    "identifiers": [
+      "heater"
+    ],
+    "manufacturer": "Tenko",
+    "model": "TH-18",
+    "name": "Tenko Heater",
+    "serial_number": "12345678"
+  },
+  "name": "Output temperature",
+  "device_class": "temperature",
+  "enabled_by_default": true,
+  "object_id": "heater_output_temperature",
+  "state_class": "measurement",
+  "state_topic": "homeassistant/sensor/heater/state",
+  "unique_id": "heater_output_temperature",
+  "unit_of_measurement": "°C",
+  "value_template": "{{ value_json.output_temperature }}"
+}

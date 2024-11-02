@@ -1,0 +1,20 @@
+{
+  "device": {
+    "identifiers": [
+      "heater"
+    ],
+    "manufacturer": "Tenko",
+    "model": "TH-18",
+    "name": "Tenko Heater",
+    "serial_number": "12345678"
+  },
+  "name": "Pressure",
+  "device_class": "pressure",
+  "enabled_by_default": true,
+  "object_id": "heater_pressure",
+  "state_class": "measurement",
+  "state_topic": "homeassistant/sensor/heater/state",
+  "unique_id": "heater_pressure",
+  "unit_of_measurement": "Bar",
+  "value_template": "{{ value_json.pressure }}"
+}
