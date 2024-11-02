@@ -1,0 +1,18 @@
+{
+  "device": {
+    "identifiers": [
+      "doorbell"
+    ],
+    "manufacturer": "Hikvision",
+    "model": "DS-KV6113-WPE1(C)",
+    "name": "Hikvision Doorbell",
+    "serial_number": "12345678"
+  },
+  "name": "Call state",
+  "device_class": "enum",
+  "enabled_by_default": true,
+  "object_id": "doorbell_call_state",
+  "state_topic": "homeassistant/sensor/doorbell/state",
+  "unique_id": "doorbell_call_state",
+  "value_template": "{{ value_json.call_state }}"
+}
