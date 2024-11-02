@@ -33,10 +33,17 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}        
 
-      - name: Build, tag, and push image to Amazon ECR
-        run: |
-          echo "jktu/deye-mqtt:$IMAGE_TAG"
-          docker buildx build --platform=linux/arm64 -t jktu/deye-mqtt:$IMAGE_TAG .
-          docker push jktu/deye-mqtt:$IMAGE_TAG
-          docker tag jktu/deye-mqtt:$IMAGE_TAG jktu/deye-mqtt:latest
-          docker push jktu/deye-mqtt:latest
+#      - name: Build, tag, and push image to Amazon ECR
+#        run: |
+#          echo "jktu/deye-mqtt:$IMAGE_TAG"
+#          docker buildx build --platform=linux/arm64 -t jktu/deye-mqtt:$IMAGE_TAG .
+#          docker push jktu/deye-mqtt:$IMAGE_TAG
+#          docker tag jktu/deye-mqtt:$IMAGE_TAG jktu/deye-mqtt:latest
+#          docker push jktu/deye-mqtt:latest
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: jktu/deye-mqtt:latest
