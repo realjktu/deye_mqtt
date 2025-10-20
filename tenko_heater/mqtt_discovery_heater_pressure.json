@@ -15,6 +15,6 @@
   "state_class": "measurement",
   "state_topic": "homeassistant/sensor/heater/state",
   "unique_id": "heater_pressure",
-  "unit_of_measurement": "Bar",
+  "unit_of_measurement": "bar",
   "value_template": "{{ value_json.pressure }}"
 }
