@@ -68,7 +68,7 @@ def parse_data(data: dict) -> dict:
         'heater1_state': data.get('HE1'),
         'heater2_state': data.get('HE2'),
         'modulation_state': data.get('MOD', {}).get('status', 0),
-        'modulation_value': data.get('MOD', {}).get('amount','0,0').split(',')[0]
+        'modulation_value': data.get('MOD', {}).get('amount','0,0').split(',')[0],
         'error': 'OFF' if data['ERR']['type_total'] != 0 or data['ERR']['type_time'] != 0 else 'ON'
     }
     return output
