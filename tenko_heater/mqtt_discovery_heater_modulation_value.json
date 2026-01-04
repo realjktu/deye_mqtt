@@ -1,0 +1,18 @@
+{
+  "device": {
+    "identifiers": [
+      "heater"
+    ],
+    "manufacturer": "Tenko",
+    "model": "TH-18",
+    "name": "Tenko Heater",
+    "serial_number": "12345678"
+  },
+  "name": "Modulation value",
+  "enabled_by_default": true,
+  "object_id": "heater_modulation_value",
+  "state_class": "measurement",
+  "state_topic": "homeassistant/sensor/heater/state",
+  "unique_id": "heater_modulation_value",
+  "value_template": "{{ value_json.modulation_value }}"
+}
