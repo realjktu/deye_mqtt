@@ -16,6 +16,6 @@
   "state_topic": "homeassistant/sensor/invertor/state",
   "unique_id": "invertor_load_power",
   "unit_of_measurement": "W",
-  "value_template": "{{ value_json.load_power }}"
+  "value_template": "{% if value_json.load_power is defined %}{{ value_json.load_power }}{% endif %}"
 }
 

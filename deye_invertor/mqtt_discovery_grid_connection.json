@@ -14,5 +14,5 @@
   "object_id": "invertor_grid_connection",
   "state_topic": "homeassistant/sensor/invertor/state",
   "unique_id": "invertor_grid_connection",
-  "value_template": "{{ value_json.grid_connection }}"
+  "value_template": "{% if value_json.grid_connection is defined %}{{ value_json.grid_connection }}{% endif %}"
 }

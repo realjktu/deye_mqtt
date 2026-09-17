@@ -8,7 +8,7 @@
     "name": "Hybryd Inverter",
     "serial_number": "123456789"
   },
-  "name": "Battery dischage limit",
+  "name": "Battery discharge limit",
   "device_class": "current",
   "enabled_by_default": true,
   "object_id": "battery_dischage_limit",
@@ -16,6 +16,6 @@
   "state_topic": "homeassistant/sensor/invertor/state",
   "unique_id": "invertor_battery_dischage_limit",
   "unit_of_measurement": "A",
-  "value_template": "{{ value_json.battery_dischage_limit }}"
+  "value_template": "{% if value_json.battery_discharge_limit is defined %}{{ value_json.battery_discharge_limit }}{% endif %}"
 }
 

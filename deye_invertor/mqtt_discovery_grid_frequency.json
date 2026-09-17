@@ -16,6 +16,6 @@
   "state_topic": "homeassistant/sensor/invertor/state",
   "unique_id": "invertor_grid_frequency",
   "unit_of_measurement": "Hz",
-  "value_template": "{{ value_json.grid_frequency }}"
+  "value_template": "{% if value_json.grid_frequency is defined %}{{ value_json.grid_frequency }}{% endif %}"
 }
 

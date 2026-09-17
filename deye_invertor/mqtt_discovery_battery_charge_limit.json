@@ -16,6 +16,6 @@
   "state_topic": "homeassistant/sensor/invertor/state",
   "unique_id": "inverter_battery_charge_limit",
   "unit_of_measurement": "A",
-  "value_template": "{{ value_json.battery_charge_limit }}"
+  "value_template": "{% if value_json.battery_charge_limit is defined %}{{ value_json.battery_charge_limit }}{% endif %}"
 }
 

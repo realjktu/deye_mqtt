@@ -8,14 +8,11 @@
     "name": "Hybryd Inverter",
     "serial_number": "123456789"
   },
-  "name": "Grid power",
-  "device_class": "power",
+  "name": "Fault state",
   "enabled_by_default": true,
-  "object_id": "invertor_grid_power",
-  "state_class": "measurement",
+  "icon": "mdi:alert-circle-outline",
+  "object_id": "invertor_fault_state",
   "state_topic": "homeassistant/sensor/invertor/state",
-  "unique_id": "invertor_grid_power",
-  "unit_of_measurement": "W",
-  "value_template": "{{ value_json.grid_power }}"
+  "unique_id": "invertor_fault_state",
+  "value_template": "{% if value_json.fault_state is not defined %}None{% elif value_json.fault_state %}{{ value_json.fault_state }}{% else %}OK{% endif %}"
 }
-

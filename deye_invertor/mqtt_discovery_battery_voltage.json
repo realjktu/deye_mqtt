@@ -16,6 +16,6 @@
   "state_topic": "homeassistant/sensor/invertor/state",
   "unique_id": "invertor_battery_voltage",
   "unit_of_measurement": "V",
-  "value_template": "{{ value_json.battery_voltage }}"
+  "value_template": "{% if value_json.battery_voltage is defined %}{{ value_json.battery_voltage }}{% endif %}"
 }
 

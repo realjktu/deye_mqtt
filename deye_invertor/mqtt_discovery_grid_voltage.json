@@ -16,6 +16,6 @@
   "state_topic": "homeassistant/sensor/invertor/state",
   "unique_id": "invertor_grid_voltage",
   "unit_of_measurement": "V",
-  "value_template": "{{ value_json.grid_voltage }}"
+  "value_template": "{% if value_json.grid_voltage is defined %}{{ value_json.grid_voltage }}{% endif %}"
 }
 

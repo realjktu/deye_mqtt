@@ -10,9 +10,17 @@
   },
   "name": "Overall state",
   "device_class": "enum",
+  "options": [
+    "standby",
+    "selfcheck",
+    "ok",
+    "alarm",
+    "fault",
+    "activating"
+  ],
   "enabled_by_default": true,
   "object_id": "invertor_overall_state",
   "state_topic": "homeassistant/sensor/invertor/state",
   "unique_id": "invertor_overall_state",
-  "value_template": "{{ value_json.overall_state }}"
+  "value_template": "{% if value_json.overall_state is defined %}{{ value_json.overall_state }}{% else %}None{% endif %}"
 }
