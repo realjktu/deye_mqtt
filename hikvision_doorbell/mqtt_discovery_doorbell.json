@@ -10,7 +10,13 @@
   },
   "name": "Call state",
   "device_class": "enum",
+  "options": [
+    "idle",
+    "ring",
+    "onCall"
+  ],
   "enabled_by_default": true,
+  "expire_after": 60,
   "object_id": "doorbell_call_state",
   "state_topic": "homeassistant/sensor/doorbell/state",
   "unique_id": "doorbell_call_state",
